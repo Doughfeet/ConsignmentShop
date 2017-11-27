@@ -53,7 +53,7 @@
             this.ListBoxItem.ItemHeight = 37;
             this.ListBoxItem.Location = new System.Drawing.Point(50, 202);
             this.ListBoxItem.Name = "ListBoxItem";
-            this.ListBoxItem.Size = new System.Drawing.Size(517, 411);
+            this.ListBoxItem.Size = new System.Drawing.Size(310, 300);
             this.ListBoxItem.TabIndex = 1;
             // 
             // ItemListBoxItems
@@ -68,7 +68,7 @@
             // 
             // BtnAddToCart
             // 
-            this.BtnAddToCart.Location = new System.Drawing.Point(612, 311);
+            this.BtnAddToCart.Location = new System.Drawing.Point(392, 282);
             this.BtnAddToCart.Name = "BtnAddToCart";
             this.BtnAddToCart.Size = new System.Drawing.Size(250, 90);
             this.BtnAddToCart.TabIndex = 3;
@@ -79,16 +79,16 @@
             // 
             this.ListboxShoppingCart.FormattingEnabled = true;
             this.ListboxShoppingCart.ItemHeight = 37;
-            this.ListboxShoppingCart.Location = new System.Drawing.Point(929, 202);
+            this.ListboxShoppingCart.Location = new System.Drawing.Point(648, 202);
             this.ListboxShoppingCart.Name = "ListboxShoppingCart";
-            this.ListboxShoppingCart.Size = new System.Drawing.Size(517, 411);
+            this.ListboxShoppingCart.Size = new System.Drawing.Size(315, 337);
             this.ListboxShoppingCart.TabIndex = 1;
             // 
             // LabelShoppingCart
             // 
             this.LabelShoppingCart.AutoSize = true;
             this.LabelShoppingCart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelShoppingCart.Location = new System.Drawing.Point(929, 162);
+            this.LabelShoppingCart.Location = new System.Drawing.Point(641, 162);
             this.LabelShoppingCart.Name = "LabelShoppingCart";
             this.LabelShoppingCart.Size = new System.Drawing.Size(236, 37);
             this.LabelShoppingCart.TabIndex = 2;
@@ -96,7 +96,7 @@
             // 
             // BtnMakePurchase
             // 
-            this.BtnMakePurchase.Location = new System.Drawing.Point(1196, 664);
+            this.BtnMakePurchase.Location = new System.Drawing.Point(713, 563);
             this.BtnMakePurchase.Name = "BtnMakePurchase";
             this.BtnMakePurchase.Size = new System.Drawing.Size(250, 90);
             this.BtnMakePurchase.TabIndex = 3;
@@ -107,7 +107,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(19F, 37F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1607, 857);
+            this.ClientSize = new System.Drawing.Size(974, 729);
             this.Controls.Add(this.BtnMakePurchase);
             this.Controls.Add(this.BtnAddToCart);
             this.Controls.Add(this.LabelShoppingCart);
