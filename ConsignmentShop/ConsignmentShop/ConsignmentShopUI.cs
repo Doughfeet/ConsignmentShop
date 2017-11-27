@@ -17,13 +17,15 @@ namespace ConsignmentShop
         private List<Item> shoppingCartData = new List<Item>();
         BindingSource itemsBinding = new BindingSource();
         BindingSource cartBinding = new BindingSource();
+        BindingSource vendorsBinding = new BindingSource();
+        private decimal storeProfit = 0;
 
         public ConsignmentShopUI()
         {
             InitializeComponent();
             SetupData();
 
-            itemsBinding.DataSource = store.Items;
+            itemsBinding.DataSource = store.Items.Where(a => a.Sold == false).ToList();
             ListBoxItem.DataSource = itemsBinding;
 
             ListBoxItem.DisplayMember = "Display";
@@ -34,6 +36,13 @@ namespace ConsignmentShop
 
             ListboxShoppingCart.DisplayMember = "Display";
             ListboxShoppingCart.ValueMember = "Display";
+
+            vendorsBinding.DataSource = store.Vendors;
+            ListBoxVendor.DataSource = vendorsBinding;
+
+            ListBoxVendor.DisplayMember = "Display";
+            ListBoxVendor.ValueMember = "Display";
+            
         }
 
         private void SetupData()
@@ -73,7 +82,6 @@ namespace ConsignmentShop
 
             store.Name = "Seconds are Better";
         }
-
         private void BtnAddToCart_Click(object sender, EventArgs e)
         {
             Item selectedItem = (Item)ListBoxItem.SelectedItem;
@@ -81,6 +89,25 @@ namespace ConsignmentShop
             shoppingCartData.Add(selectedItem);
 
             cartBinding.ResetBindings(false);
+        }
+
+        private void BtnMakePurchase_Click(object sender, EventArgs e)
+        {
+
+            foreach (Item item in shoppingCartData)
+            {
+                item.Sold = true;
+                item.Owner.PaymentDue += (decimal)item.Owner.Commission * item.Price;
+                storeProfit += (1 - (decimal)item.Owner.Commission) * item.Price;
+            }
+
+            shoppingCartData.Clear();
+
+            itemsBinding.DataSource = store.Items.Where(a => a.Sold == false).ToList();
+
+            StoreProfitLabel.Text = string.Format("${0}", storeProfit);
+            cartBinding.ResetBindings(false);
+            itemsBinding.ResetBindings(false);
         }
     }
 }
