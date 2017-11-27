@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27004.2009
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsignmentShop", "ConsignmentShop\ConsignmentShop.csproj", "{DDED4684-244E-419D-B217-0C33F5A559A2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsignmentShopLibrary", "ConsignmentShopLibrary\ConsignmentShopLibrary.csproj", "{BAEB7770-D209-4972-95CD-76AC05E27B9A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{DDED4684-244E-419D-B217-0C33F5A559A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DDED4684-244E-419D-B217-0C33F5A559A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DDED4684-244E-419D-B217-0C33F5A559A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BAEB7770-D209-4972-95CD-76AC05E27B9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAEB7770-D209-4972-95CD-76AC05E27B9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAEB7770-D209-4972-95CD-76AC05E27B9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAEB7770-D209-4972-95CD-76AC05E27B9A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
