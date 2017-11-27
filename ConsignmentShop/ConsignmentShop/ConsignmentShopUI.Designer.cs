@@ -68,12 +68,13 @@
             // 
             // BtnAddToCart
             // 
-            this.BtnAddToCart.Location = new System.Drawing.Point(392, 282);
+            this.BtnAddToCart.Location = new System.Drawing.Point(378, 284);
             this.BtnAddToCart.Name = "BtnAddToCart";
             this.BtnAddToCart.Size = new System.Drawing.Size(250, 90);
             this.BtnAddToCart.TabIndex = 3;
             this.BtnAddToCart.Text = "Add To Chart";
             this.BtnAddToCart.UseVisualStyleBackColor = true;
+            this.BtnAddToCart.Click += new System.EventHandler(this.BtnAddToCart_Click);
             // 
             // ListboxShoppingCart
             // 

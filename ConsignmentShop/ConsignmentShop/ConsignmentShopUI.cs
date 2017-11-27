@@ -16,7 +16,7 @@ namespace ConsignmentShop
         private Store store = new Store();
         private List<Item> shoppingCartData = new List<Item>();
         BindingSource itemsBinding = new BindingSource();
-
+        BindingSource cartBinding = new BindingSource();
 
         public ConsignmentShopUI()
         {
@@ -28,6 +28,12 @@ namespace ConsignmentShop
 
             ListBoxItem.DisplayMember = "Display";
             ListBoxItem.ValueMember = "Display";
+
+            cartBinding.DataSource = shoppingCartData;
+            ListboxShoppingCart.DataSource = cartBinding;
+
+            ListboxShoppingCart.DisplayMember = "Display";
+            ListboxShoppingCart.ValueMember = "Display";
         }
 
         private void SetupData()
@@ -66,6 +72,15 @@ namespace ConsignmentShop
             });
 
             store.Name = "Seconds are Better";
+        }
+
+        private void BtnAddToCart_Click(object sender, EventArgs e)
+        {
+            Item selectedItem = (Item)ListBoxItem.SelectedItem;
+
+            shoppingCartData.Add(selectedItem);
+
+            cartBinding.ResetBindings(false);
         }
     }
 }
